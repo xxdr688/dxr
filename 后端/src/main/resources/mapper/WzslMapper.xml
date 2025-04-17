@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lyk.learn.springboot.mapper.WzslMapper">
+
+    <select id="countMedal" resultType="java.lang.Long">
+        SELECT SUM(wznumber) as num FROM wzsl;
+    </select>
+    <select id="countMoney" resultType="java.lang.Long">
+        SELECT SUM(wznumber) FROM wzsl where flag = 1;
+    </select>
+    <select id="countShop" resultType="java.lang.Long">
+        SELECT SUM(wznumber) FROM wzsl where flagnumber = 1;
+    </select>
+</mapper>
